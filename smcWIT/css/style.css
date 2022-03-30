@@ -19,9 +19,10 @@ body {
   font-size: 10px;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 10px;
 }
 
+/* --------------heading--------------- */
 .header {
   position: relative;
   height: 95vh;
@@ -33,11 +34,10 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
 }
 
-/* --------------heading--------------- */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -71,6 +71,7 @@ body {
   text-align: center;
 }
 
+/* ---------logo---------------- */
 .logo-box {
   position: absolute;
   top: 40px;
@@ -121,6 +122,10 @@ body {
   background-color: #55c57a;
 }
 
+.btn-white::after {
+  background-color: #fff;
+}
+
 .btn:hover::after {
   transform: scale(1.5);
   opacity: 0;
@@ -129,6 +134,113 @@ body {
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+/*------------------- Discover Page ----------------- */
+.discover {
+  margin-top: 2rem;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.discover-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.discover-desc {
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  color: black;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+/* -----------Third Page------------- */
+
+.officers {
+  position: relative;
+  height: 95vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    to right bottom,
+    hsla(111, 55%, 64%, 0.9),
+    hsla(160, 64%, 43%, 0.9)
+  );
+  clip-path: polygon(0 8%, 100% 0, 100% 90%, 0% 100%);
+}
+
+/* slides experimental  */
+#officersCarousel {
+  width: 75vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.carousel-item > img {
+  width: 75vw;
+  height: 60vh;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* ---------JOIN US --------------- */
+.action {
+  height: 95vh;
+  position: relative;
+}
+
+.join {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  align-items: center;
+}
+
+.join-img {
+  width: 12rem;
+}
+
+.join-resource > h2 {
+  font-size: 4rem;
+}
+
+.join-resource > p {
+  font-size: 1.2rem;
+}
+
+#join-btn {
+  background-color: #55c57a;
+  color: white;
+}
+
+/* ----Footer------ */
+footer {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /*----------------------Animations---------------------- */
@@ -174,127 +286,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/*------------------- Second Page ----------------- */
-.discover {
-  height: 80vh;
-  position: relative;
-}
-
-.discover-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 80%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-content: center;
-  gap: 1rem;
-}
-
-.discover-image {
-  position: relative;
-}
-
-#discover-image1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -10%);
-  height: 100%;
-  height: 30vh;
-  border-radius: 1rem;
-  z-index: -1;
-}
-
-.discover-desc {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 300;
-  letter-spacing: 0.5rem;
-  color: black;
-  padding: 4rem;
-  border-radius: 1rem;
-  background-color: #a9c9ff;
-  /* background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%); */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-/* -----------Third Page------------- */
-
-.officers {
-  position: relative;
-  height: 95vh;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: linear-gradient(
-    to right bottom,
-    hsla(111, 55%, 64%, 0.9),
-    hsla(160, 64%, 43%, 0.9)
-  );
-  clip-path: polygon(0 8%, 100% 0, 100% 90%, 0% 100%);
-}
-
-/* slides experimental  */
-#officersCarousel {
-  width: 55vw;
-  height: 45vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 8px;
-}
-
-.carousel-item > img {
-  width: 55vw;
-  height: 45vh;
-  border-radius: 8px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-
-/* ---------JOIN US --------------- */
-.action {
-  height: 95vh;
-  position: relative;
-}
-
-.join {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  align-items: center;
-  gap: 4rem;
-}
-
-.join-resource > h2 {
-  font-size: 4rem;
-}
-
-.join-resource > p {
-  font-size: 1.2rem;
-}
-
-#join-btn {
-  background-color: #55c57a;
-  color: white;
-}
-
-/* ----Footer------ */
-footer {
-  width: 100%;
-  height: 60px;
-  text-align: center;
-  font-size: 2rem;
 }
 
 @media (min-width: 576px) {
